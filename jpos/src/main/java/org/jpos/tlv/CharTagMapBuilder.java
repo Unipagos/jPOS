@@ -24,7 +24,7 @@ package org.jpos.tlv;
  * Using {@code withTagLengthSwap(true)} while creating the builder causes
  * switchs {@code CharTagMap} in LTV mode.
  *
- * @author Robert Demski <drdemsey@gmail.com>
+ * @author Robert Demski &lt;drdemsey@gmail.com&gt;
  */
 public class CharTagMapBuilder {
 

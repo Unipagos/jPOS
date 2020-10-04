@@ -20,6 +20,7 @@ package org.jpos.iso.packager;
 
 import org.jpos.iso.*;
 import org.jpos.iso.header.BaseHeader;
+import org.jpos.tlv.ISOTaggedField;
 import org.jpos.util.LogEvent;
 import org.jpos.util.LogSource;
 import org.jpos.util.Logger;
@@ -55,6 +56,7 @@ public class XMLPackager extends DefaultHandler
     public static final String ISOMSG_TAG    = "isomsg";
     public static final String ISOFIELD_TAG  = "field";
     public static final String ID_ATTR       = "id";
+    public static final String TAG_ATTR      = "tag";
     public static final String VALUE_ATTR    = "value";
     public static final String TYPE_ATTR     = "type";
     public static final String TYPE_BINARY   = "binary";
@@ -222,6 +224,7 @@ public class XMLPackager extends DefaultHandler
                 }
             } else if (name.equals (ISOFIELD_TAG)) {
                 ISOMsg m     = (ISOMsg) stk.peek();
+                String tag   = atts.getValue(TAG_ATTR);
                 String value = atts.getValue(VALUE_ATTR);
                 String type  = atts.getValue(TYPE_ATTR);
                 if (id == null)
@@ -246,6 +249,9 @@ public class XMLPackager extends DefaultHandler
                 }
                 else {
                     ic = new ISOField (fieldNumber, ISOUtil.stripUnicode(value));
+                }
+                if (tag != null) {
+                    ic = new ISOTaggedField(tag, ic);
                 }
                 m.set (ic);
                 stk.push (ic);

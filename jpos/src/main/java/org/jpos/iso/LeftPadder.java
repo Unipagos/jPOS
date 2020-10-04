@@ -33,6 +33,7 @@ public class LeftPadder implements Padder
 	 * fields.
 	 */
     public static final LeftPadder ZERO_PADDER = new LeftPadder('0');
+    public static final LeftPadder SPACE_PADDER = new LeftPadder(' ');
 
     private char pad;
 

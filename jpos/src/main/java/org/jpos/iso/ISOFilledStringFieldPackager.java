@@ -171,7 +171,7 @@ public class ISOFilledStringFieldPackager extends ISOFieldPackager
                 throw new ISOException("Field length " + len + " too long. Max: " + getLength());
             int lenLen = prefixer.getPackedLength();
             String unpacked = interpreter.uninterpret(b, offset + lenLen, len);
-            c.setValue(unpacked);
+            c.setValue(padder.unpad(unpacked));
             return lenLen + interpreter.getPackedLength(getLength());
         } catch(Exception e)
         {
@@ -203,7 +203,7 @@ public class ISOFilledStringFieldPackager extends ISOFieldPackager
             }
             int packedLen = interpreter.getPackedLength(len);
             String unpacked = interpreter.uninterpret(readBytes (in, packedLen), 0, len);
-            c.setValue(unpacked);
+            c.setValue(padder.unpad(unpacked));
             in.skip(interpreter.getPackedLength(getLength()) - packedLen);
         } catch(ISOException e)
         {

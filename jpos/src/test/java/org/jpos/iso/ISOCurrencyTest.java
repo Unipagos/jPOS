@@ -102,12 +102,12 @@ public class ISOCurrencyTest {
         c.put("950", "XAF"); cD.put("950", 0); // CFA Franc BEAC CENTRAL AFRICAN REPUBLIC (THE) 
         c.put("950", "XAF"); cD.put("950", 0); // CFA Franc BEAC CHAD 
         c.put("152", "CLP"); cD.put("152", 0); // Chilean Peso CHILE 
-        c.put("990", "CLF"); cD.put("990", 4); // Unidad de Fomento CHILE TRUE
+        c.put("990", "CLF"); cD.put("990", 0); // Unidad de Fomento CHILE TRUE
         c.put("156", "CNY"); cD.put("156", 2); // Yuan Renminbi CHINA 
         c.put("036", "AUD"); cD.put("036", 2); // Australian Dollar CHRISTMAS ISLAND 
         c.put("036", "AUD"); cD.put("036", 2); // Australian Dollar COCOS (KEELING) ISLANDS (THE) 
         c.put("170", "COP"); cD.put("170", 2); // Colombian Peso COLOMBIA 
-        c.put("970", "COU"); cD.put("970", 2); // Unidad de Valor Real COLOMBIA TRUE
+//      c.put("970", "COU"); cD.put("970", 2); // Unidad de Valor Real COLOMBIA TRUE
         c.put("174", "KMF"); cD.put("174", 0); // Comoro Franc COMOROS (THE) 
         c.put("976", "CDF"); cD.put("976", 2); // Congolese Franc CONGO (THE DEMOCRATIC REPUBLIC OF THE) 
         c.put("950", "XAF"); cD.put("950", 0); // CFA Franc BEAC CONGO (THE) 
@@ -281,8 +281,8 @@ public class ISOCurrencyTest {
         c.put("748", "SZL"); cD.put("748", 2); // Lilangeni SWAZILAND 
         c.put("752", "SEK"); cD.put("752", 2); // Swedish Krona SWEDEN 
         c.put("756", "CHF"); cD.put("756", 2); // Swiss Franc SWITZERLAND 
-        c.put("947", "CHE"); cD.put("947", 2); // WIR Euro SWITZERLAND TRUE
-        c.put("948", "CHW"); cD.put("948", 2); // WIR Franc SWITZERLAND TRUE
+//      c.put("947", "CHE"); cD.put("947", 2); // WIR Euro SWITZERLAND TRUE
+//      c.put("948", "CHW"); cD.put("948", 2); // WIR Franc SWITZERLAND TRUE
         c.put("760", "SYP"); cD.put("760", 2); // Syrian Pound SYRIAN ARAB REPUBLIC 
         c.put("901", "TWD"); cD.put("901", 2); // New Taiwan Dollar TAIWAN (PROVINCE OF CHINA) 
         c.put("972", "TJS"); cD.put("972", 2); // Somoni TAJIKISTAN 
@@ -306,7 +306,7 @@ public class ISOCurrencyTest {
         c.put("840", "USD"); cD.put("840", 2); // US Dollar UNITED STATES OF AMERICA (THE) 
         c.put("997", "USN"); cD.put("997", 2); // US Dollar (Next day) UNITED STATES OF AMERICA (THE) TRUE
         c.put("858", "UYU"); cD.put("858", 2); // Peso Uruguayo URUGUAY 
-        c.put("940", "UYI"); cD.put("940", 0); // Uruguay Peso en Unidades Indexadas (URUIURUI) URUGUAY TRUE
+//      c.put("940", "UYI"); cD.put("940", 0); // Uruguay Peso en Unidades Indexadas (URUIURUI) URUGUAY TRUE
         c.put("860", "UZS"); cD.put("860", 2); // Uzbekistan Sum UZBEKISTAN 
         c.put("548", "VUV"); cD.put("548", 0); // Vatu VANUATU 
         c.put("937", "VEF"); cD.put("937", 2); // Bolívar VENEZUELA (BOLIVARIAN REPUBLIC OF) 

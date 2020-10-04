@@ -121,7 +121,7 @@ public class ISOBinaryFieldPackager extends ISOFieldPackager
             if (len == -1) {
                 // The prefixer doesn't know how long the field is, so use
                 // maxLength instead
-                len = getLength();
+                len = trim ? Math.min(getLength(), b.length - offset) : getLength();
             }
             else if (getLength() > 0 && len > getLength())
                 throw new ISOException("Field length " + len + " too long. Max: " + getLength());

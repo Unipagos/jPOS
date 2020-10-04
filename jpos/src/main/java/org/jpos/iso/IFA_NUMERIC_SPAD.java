@@ -16,19 +16,26 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.jpos.tlv.packager;
-
-import org.jpos.iso.IFB_LLBINARY;
-import org.jpos.iso.ISOFieldPackager;
+package org.jpos.iso;
 
 /**
- * @author Vishnu Pillai
+ * ISOFieldPackager ASCII NUMERIC.
+ * Left padder with spaces, ASCII Interpretation, and no length prefix.
+ *
+ * @author apr@cs.com.uy
+ * @author jonathan.oconnor@xcom.de
+ * @version $Id$
+ * @see ISOComponent
  */
-public class IFTB_LLBINARY extends IFB_LLBINARY implements TaggedFieldPackager {
-    private String token;
-
-    public void setToken(String token) { this.token = token; }
-    public String getToken() { return token; }
-
-    public ISOFieldPackager getDelegate() { return (ISOFieldPackager)this; }
+public class IFA_NUMERIC_SPAD extends ISOFilledStringFieldPackager {
+    public IFA_NUMERIC_SPAD() {
+        super(LeftPadder.SPACE_PADDER, AsciiInterpreter.INSTANCE, NullPrefixer.INSTANCE);
+    }
+    /**
+     * @param len - field len
+     * @param description symbolic descrption
+     */
+    public IFA_NUMERIC_SPAD(int len, String description) {
+        super(len, description, LeftPadder.SPACE_PADDER, AsciiInterpreter.INSTANCE, NullPrefixer.INSTANCE);
+    }
 }

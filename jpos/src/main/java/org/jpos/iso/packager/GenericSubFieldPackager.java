@@ -139,7 +139,7 @@ public class GenericSubFieldPackager extends GenericPackager implements ISOSubFi
             for (int i=getFirstField(); i<=m.getMaxField(); i++) 
             {
                 c = (ISOComponent) fields.get (i);
-                if (c == null && !emitBitMap())
+                if (c == null && !emitBitMap() && fld[i] != null)
                     c = new ISOField (i, "");
                 if (c != null) {
                     try 

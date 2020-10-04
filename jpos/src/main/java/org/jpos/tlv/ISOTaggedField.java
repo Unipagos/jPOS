@@ -136,20 +136,12 @@ public class ISOTaggedField extends ISOComponent {
     @Override
     public void dump(final PrintStream p, final String indent) {
         if (tag != null) {
-            p.print(indent + "<" + tag + ">");
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             PrintStream ps = new PrintStream(baos);
             delegate.dump(ps, "");
-
             String s = new String(baos.toByteArray());
-            if ( s.endsWith("\r\n")) {
-                s = s.substring(0, s.length() - 2);
-            }
-            else if (s.endsWith("\r") || s.endsWith("\n") ) {
-                s = s.substring(0, s.length() - 1);
-            }
-            p.print(s);
-            p.print("</" + tag + ">\n");
+            s = s.replaceFirst("<([a-z]+) ", "<$1 tag=\"" + tag + "\" ");
+            p.print(indent + s);
         } else {
             delegate.dump(p, indent);
         }

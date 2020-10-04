@@ -33,7 +33,7 @@ import java.util.HashMap;
  *   <li>length is encoded as decimal characters
  * </ul>
  *
- * @author Grzegorz Wieczorek <grw1@wp.pl>
+ * @author Grzegorz Wieczorek &lt;grw1@wp.pl&gt;
  */
 public class CharTagMap extends HashMap<String, CharTag> {
 

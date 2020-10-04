@@ -30,7 +30,7 @@ import org.jpos.iso.ISOUtil;
  *   <li><tt>VAL</tt> - the value of the tag or missing if length is 0</li>
  * </ul>
  *
- * @author Robert Demski &lt;drdemsey@gmail.com>
+ * @author Robert Demski &lt;drdemsey@gmail.com&gt;
  */
 public class CharTag {
 

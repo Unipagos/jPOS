@@ -45,7 +45,7 @@ public class DefaultICCBERTLVFormatMapper implements BERTLVFormatMapper {
     public TLVDataFormat getFormat(Integer tagNumber) throws ISOException {
         EMVTagType tagType;
         try {
-            tagType = getTagType(tagNumber);
+            tagType =   getTagType(tagNumber);
         } catch (UnknownTagNumberException e) {
             throw new ISOException(e);
         }
