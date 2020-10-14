@@ -19,6 +19,8 @@
 package org.jpos.tlv.packager.bertlv;
 
 
+import org.jpos.emv.EMVTagType;
+import org.jpos.emv.UnknownTagNumberException;
 import org.jpos.tlv.TLVDataFormat;
 import org.jpos.iso.ISOException;
 
@@ -27,7 +29,5 @@ import org.jpos.iso.ISOException;
  * @author Vishnu Pillai
  */
 public interface BERTLVFormatMapper {
-
-    TLVDataFormat getFormat(Integer tagNumber) throws ISOException;
-
+    EMVTagType getTagType(final Integer tagNumber) throws UnknownTagNumberException;
 }

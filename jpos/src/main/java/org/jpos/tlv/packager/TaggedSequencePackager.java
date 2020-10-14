@@ -26,6 +26,7 @@ import org.jpos.iso.ISOField;
 import org.jpos.iso.ISOFieldPackager;
 import org.jpos.iso.ISOUtil;
 import org.jpos.iso.LeftPadder;
+import org.jpos.iso.TaggedFieldPackager;
 import org.jpos.iso.packager.GenericPackager;
 import org.jpos.tlv.ISOTaggedField;
 import org.jpos.tlv.OffsetIndexedComposite;

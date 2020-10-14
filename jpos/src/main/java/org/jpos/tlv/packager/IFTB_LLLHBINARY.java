@@ -16,28 +16,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.jpos.tlv;
+package org.jpos.tlv.packager;
 
+import org.jpos.iso.IFB_LLLHBINARY;
+import org.jpos.iso.ISOFieldPackager;
 
 /**
  * @author Vishnu Pillai
  */
-public enum TLVDataFormat {
-    ASCII_NUMERIC,
-    ASCII_ALPHA,
-    ASCII_ALPHA_NUMERIC,
-    ASCII_ALPHA_NUMERIC_SPACE,
-    ASCII_ALPHA_NUMERIC_SPECIAL,
-    BINARY,
-    COMPRESSED_NUMERIC,
-    CONSTRUCTED,
-    PACKED_NUMERIC,
-    PACKED_NUMERIC_DATE_YYMMDD,
-    PACKED_NUMERIC_TIME_HHMMSS,
-    EBCDIC_NUMERIC,
-    EBCDIC_ALPHA,
-    EBCDIC_ALPHA_NUMERIC,
-    EBCDIC_ALPHA_NUMERIC_SPACE,
-    EBCDIC_ALPHA_NUMERIC_SPECIAL,
-    PROPRIETARY
+public class IFTB_LLLHBINARY extends IFB_LLLHBINARY implements TaggedFieldPackager {
+    private String token;
+
+    public void setToken(String token) { this.token = token; }
+    public String getToken() { return token; }
+
+    public ISOFieldPackager getDelegate() { return (ISOFieldPackager)this; }
 }

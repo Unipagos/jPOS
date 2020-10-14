@@ -177,7 +177,7 @@ public class ISOStringFieldPackager extends ISOFieldPackager
             }
             else if (getLength() > 0 && len > getLength())
                 throw new ISOException("Field length " + len + " too long. Max: " + getLength());
-
+            len =  (len < 0) ? len = b.length - offset : len;
             int lenLen = prefixer.getPackedLength();
             String unpacked = interpreter.uninterpret(b, offset + lenLen, len);
             c.setValue(unpacked);
